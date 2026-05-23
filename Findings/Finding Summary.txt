@@ -1,0 +1,80 @@
+Findings Summary
+
+1. Missing Content Security Policy (CSP)
+
+Severity: Medium
+
+Description:
+The application does not implement a Content Security Policy (CSP) header.
+
+Impact:
+This increases exposure to Cross-Site Scripting (XSS) and malicious script injection attacks.
+
+Recommendation:
+Implement a strict Content-Security-Policy header to restrict untrusted script sources.
+
+⸻
+
+2. Missing Anti-Clickjacking Header
+
+Severity: Medium
+
+Description:
+The application does not include anti-clickjacking protection headers.
+
+Impact:
+Attackers may attempt clickjacking attacks by embedding the website inside malicious frames.
+
+Recommendation:
+Configure:
+X-Frame-Options: DENY
+
+⸻
+
+3. Cookie Security Weakness
+
+Severity: Medium
+
+Description:
+Cookies were observed without strong security attributes.
+
+Impact:
+Improper cookie configuration may increase the risk of session hijacking and unauthorized access.
+
+Recommendation:
+Enable:
+
+* HttpOnly
+* Secure
+* SameSite
+
+⸻
+
+4. Information Disclosure
+
+Severity: Low
+
+Description:
+Publicly accessible technical information was identified through headers and client-side resources.
+
+Impact:
+Attackers may leverage disclosed information during reconnaissance activities.
+
+Recommendation:
+Limit unnecessary server and application information exposure.
+
+⸻
+
+5. Missing X-Content-Type-Options Header
+
+Severity: Low
+
+Description:
+The application does not include the X-Content-Type-Options security header.
+
+Impact:
+Browsers may incorrectly interpret content types, increasing exposure to content-sniffing attacks.
+
+Recommendation:
+Configure:
+X-Content-Type-Options: nosniff
