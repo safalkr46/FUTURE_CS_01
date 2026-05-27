@@ -1,0 +1,8 @@
+curl -I http:// demo.testfire.net
+curl: (3) URL rejected: No host part in the URL
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=22F662541337A6D4837EE979E136D3AD; Path=/; HttpOnly
+Content-Type: text/html;charset=IS0-8859-1
+Transfer-Encoding: chunked
+Date: Sat, 23 May 2026 15:25:45 GMT
