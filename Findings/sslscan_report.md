@@ -63,12 +63,12 @@ Certificate Information:
 
 | Protocol | Status | Security |
 |----------|--------|----------|
-| `SSLv2` | Disabled | ✅ Secure |
-| `SSLv3` | Disabled | ✅ Secure |
-| `TLSv1.0` | Disabled | ✅ Secure |
-| `TLSv1.1` | Disabled | ✅ Secure |
-| `TLSv1.2` | Disabled | ⚠️ Unexpected |
-| `TLSv1.3` | Disabled | ⚠️ Unexpected |
+| `SSLv2` | Disabled | Secure |
+| `SSLv3` | Disabled | Secure |
+| `TLSv1.0` | Disabled | Secure |
+| `TLSv1.1` | Disabled | Secure |
+| `TLSv1.2` | Disabled | Unexpected |
+| `TLSv1.3` | Disabled | Unexpected |
 
 ---
 
@@ -76,9 +76,9 @@ Certificate Information:
 
 | Check | Result | Notes |
 |-------|--------|-------|
-| **TLS Fallback SCSV** | ⚠️ Unable to determine | Connection failed during test |
+| **TLS Fallback SCSV** | Unable to determine | Connection failed during test |
 | **TLS Renegotiation** | Not supported | Reduces renegotiation attack risk |
-| **TLS Compression** | Disabled | ✅ Protects against CRIME attack |
+| **TLS Compression** | Disabled | Protects against CRIME attack |
 | **Heartbleed** | No result | Could not be confirmed or ruled out |
 
 ---
