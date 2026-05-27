@@ -1,80 +1,91 @@
-Findings Summary
+=============================================
+  FINDINGS SUMMARY
+=============================================
 
-1. Missing Content Security Policy (CSP)
 
-Severity: Medium
-
-Description:
-The application does not implement a Content Security Policy (CSP) header.
-
-Impact:
-This increases exposure to Cross-Site Scripting (XSS) and malicious script injection attacks.
-
-Recommendation:
-Implement a strict Content-Security-Policy header to restrict untrusted script sources.
-
-⸻
-
-2. Missing Anti-Clickjacking Header
-
-Severity: Medium
+1. MISSING CONTENT SECURITY POLICY (CSP)
+-----------------------------------------
+Severity:       Medium
 
 Description:
-The application does not include anti-clickjacking protection headers.
+  The application does not implement a Content Security Policy (CSP) header.
 
 Impact:
-Attackers may attempt clickjacking attacks by embedding the website inside malicious frames.
+  This increases exposure to Cross-Site Scripting (XSS) and malicious
+  script injection attacks.
 
 Recommendation:
-Configure:
-X-Frame-Options: DENY
+  Implement a strict Content-Security-Policy header to restrict untrusted
+  script sources.
 
-⸻
 
-3. Cookie Security Weakness
-
-Severity: Medium
+2. MISSING ANTI-CLICKJACKING HEADER
+--------------------------------------
+Severity:       Medium
 
 Description:
-Cookies were observed without strong security attributes.
+  The application does not include anti-clickjacking protection headers.
 
 Impact:
-Improper cookie configuration may increase the risk of session hijacking and unauthorized access.
+  Attackers may attempt clickjacking attacks by embedding the website
+  inside malicious frames.
 
 Recommendation:
-Enable:
+  Configure:
+    X-Frame-Options: DENY
 
-* HttpOnly
-* Secure
-* SameSite
 
-⸻
-
-4. Information Disclosure
-
-Severity: Low
+3. COOKIE SECURITY WEAKNESS
+------------------------------
+Severity:       Medium
 
 Description:
-Publicly accessible technical information was identified through headers and client-side resources.
+  Cookies were observed without strong security attributes.
 
 Impact:
-Attackers may leverage disclosed information during reconnaissance activities.
+  Improper cookie configuration may increase the risk of session hijacking
+  and unauthorized access.
 
 Recommendation:
-Limit unnecessary server and application information exposure.
+  Enable the following cookie attributes:
+    - HttpOnly
+    - Secure
+    - SameSite
 
-⸻
 
-5. Missing X-Content-Type-Options Header
-
-Severity: Low
+4. INFORMATION DISCLOSURE
+---------------------------
+Severity:       Low
 
 Description:
-The application does not include the X-Content-Type-Options security header.
+  Publicly accessible technical information was identified through headers
+  and client-side resources.
 
 Impact:
-Browsers may incorrectly interpret content types, increasing exposure to content-sniffing attacks.
+  Attackers may leverage disclosed information during reconnaissance
+  activities.
 
 Recommendation:
-Configure:
-X-Content-Type-Options: nosniff
+  Limit unnecessary server and application information exposure.
+
+
+5. MISSING X-CONTENT-TYPE-OPTIONS HEADER
+------------------------------------------
+Severity:       Low
+
+Description:
+  The application does not include the X-Content-Type-Options security
+  header.
+
+Impact:
+  Browsers may incorrectly interpret content types, increasing exposure
+  to content-sniffing attacks.
+
+Recommendation:
+  Configure:
+    X-Content-Type-Options: nosniff
+
+
+=============================================
+  END OF FINDINGS SUMMARY
+=============================================
