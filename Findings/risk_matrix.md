@@ -24,10 +24,10 @@ This matrix maps all identified findings to their **severity level** and corresp
 
 | Severity | Count |
 |----------|-------|
-| 🔴 High | 0 |
-| 🟠 Medium | 3 |
-| 🟡 Low | 2 |
-| 🟢 Informational | 0 |
+| High | 0 |
+| Medium | 3 |
+| Low | 2 |
+| Informational | 0 |
 
 ---
 
